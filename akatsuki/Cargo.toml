@@ -1,0 +1,21 @@
+[package]
+name = "akatsuki"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "akatsuki"
+crate-type = ["cdylib"]
+
+[dependencies]
+shared = { path = "../shared" }
+windows.workspace = true
+ntapi.workspace = true
+anyhow.workspace = true
+log.workspace = true
+
+[build-dependencies]
+winres = "0.1"
+

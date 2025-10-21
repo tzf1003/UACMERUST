@@ -1,0 +1,70 @@
+[workspace]
+members = [
+    "shared",
+    "akagi",
+    "fubuki",
+    "akatsuki",
+    "naka",
+    "yuubari",
+]
+resolver = "2"
+
+[workspace.package]
+version = "3.6.4"
+authors = ["UACME Rust Port"]
+edition = "2021"
+license = "BSD-3-Clause"
+
+[workspace.dependencies]
+# Windows API bindings
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Memory",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Registry",
+    "Win32_System_SystemServices",
+    "Win32_System_WindowsProgramming",
+    "Win32_System_SystemInformation",
+    "Win32_System_Environment",
+    "Win32_System_RemoteDesktop",
+    "Win32_System_Com",
+    "Win32_System_IO",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+# NT API
+ntapi = "0.4"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+
+# Utilities
+once_cell = "1.19"
+lazy_static = "1.4"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
+

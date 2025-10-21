@@ -1,0 +1,46 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.cd
+*.bin
+
+# Logs
+*.log
+
+# Original C/C++ build artifacts
+Source/*/x64/
+Source/*/x86/
+Source/*/*.user
+Source/*/*.aps
+Source/*/*.suo
+Source/*/*.sdf
+Source/*/*.opensdf
+Source/.vs/
+*.obj
+*.pch
+*.ilk
+*.exp
+*.lib
+
+# Keep original source for reference
+!Source/
+

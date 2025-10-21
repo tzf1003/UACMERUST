@@ -1,0 +1,23 @@
+[package]
+name = "akagi"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "akagi"
+path = "src/main.rs"
+
+[dependencies]
+shared = { path = "../shared" }
+windows.workspace = true
+ntapi.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+log.workspace = true
+env_logger.workspace = true
+
+[build-dependencies]
+winres = "0.1"
+

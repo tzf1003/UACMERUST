@@ -1,0 +1,20 @@
+[package]
+name = "shared"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "shared"
+crate-type = ["rlib"]
+
+[dependencies]
+windows.workspace = true
+ntapi.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+log.workspace = true
+once_cell.workspace = true
+lazy_static.workspace = true
+
